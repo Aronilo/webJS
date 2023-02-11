@@ -28,26 +28,15 @@ for (let i = 0; i <= number; i++) {
 }
 
 
-let star = "*";
-let grid = "#";
-let line = "";
-let space = " ";
-let tree = "";
-let treeHeight = 13;
-
-for (let i = 0; i < treeHeight; i++) {
-    for (let j = 0; j < treeHeight - i; j++) {
-        line += space;
+for (let i=0 ; i< 13; i++) {
+    if (i === 12 && i!== 0) {
+        console.log('||');
     }
-    for (let k = 0; k < i + 0.5; k++) {
-        if (k % 2 === 0) {
-            line += star;
-        } else {
-            line += grid;
-        }
+    else if (i % 2 === 0) {
+        console.log('*' .repeat(i) );
     }
-    tree += line + "\n";
-    line = "";
+    else {
+        console.log('#' .repeat(i));
+    }
 }
-tree += space.repeat(treeHeight - 1) + "||";
-console.log(tree);
+
