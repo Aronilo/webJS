@@ -40,3 +40,32 @@ for (let i=0 ; i< 13; i++) {
     }
 }
 
+
+let number1 = 10;
+let userNumber = +prompt('Введите число');
+while (!parseInt(userNumber)) {
+    while (userNumber !== number1) {
+        if (userNumber > number1) {
+            userNumber = +prompt('Ваше число больше');
+        } else if (userNumber < number1) {
+            userNumber = +prompt('Ваше число меньше');
+        }
+    }
+}
+console.log('Вы угадали число');
+
+//Write code that checks if the number n is evenly divisible by two numbers x and y. All inputs are positive non-zero numbers.Sample output: > n =   3, x = 1, y = 3 =>  true
+
+let n = +prompt('Введите число n');
+let x = +prompt('Введите число x');
+let y = +prompt('Введите число y');
+if (n % x === 0 && n % y === 0) {
+    console.log(`n = ${n}, x = ${x}, y = ${y} => TRUE`);
+} else {
+    console.log(`n = ${n}, x = ${x}, y = ${y} => FALSE`);
+}
+
+
+
+
+
