@@ -54,7 +54,6 @@ while (!parseInt(userNumber)) {
 }
 console.log('Вы угадали число');
 
-//Write code that checks if the number n is evenly divisible by two numbers x and y. All inputs are positive non-zero numbers.Sample output: > n =   3, x = 1, y = 3 =>  true
 
 let n = +prompt('Введите число n');
 let x = +prompt('Введите число x');
@@ -66,6 +65,16 @@ if (n % x === 0 && n % y === 0) {
 }
 
 
+let monthNumber = +prompt(`Введите номер месяца`);
+if (monthNumber === 1 || monthNumber === 2 || monthNumber === 3) {
+    console.log(`Месяц ${monthNumber} => 1 квартал`)
+} else if (monthNumber === 4 || monthNumber === 5 || monthNumber === 6){
+    console.log(`Месяц ${monthNumber} => 2 квартал`)
+} else if (monthNumber === 7 || monthNumber === 8 || monthNumber === 9){
+    console.log(`Месяц ${monthNumber} => 3 квартал`)
+} else {
+    console.log(`Месяц ${monthNumber} => 4 квартал`)
+}
 
 
 
