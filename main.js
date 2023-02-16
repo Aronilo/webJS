@@ -1,5 +1,8 @@
+//Задача №1 Конвертация скоростей
+
 console.log('36 км/час соответствует 10 м/с \n 20 м/с соответствует 72 км/час');
 
+//Задача №2 Треугольник
 let side = 5;
 let side2 = 7;
 let side3 = 5;
@@ -15,6 +18,7 @@ if (side + side2 > side3 && side + side3 > side2 && side2 + side3 > side) {
     console.log('Треугольник не существует');
 }
 
+//Задача №3 Fizz-Buzz
 
 let number = prompt('Введите число');
 for (let i = 0; i <= number; i++) {
@@ -27,6 +31,7 @@ for (let i = 0; i <= number; i++) {
     }
 }
 
+//Задача №4 Елка к новому году
 
 for (let i=0 ; i< 13; i++) {
     if (i === 12 && i!== 0) {
@@ -40,6 +45,7 @@ for (let i=0 ; i< 13; i++) {
     }
 }
 
+//Задача №5 Угадай число
 
 let number1 = 10;
 let userNumber = +prompt('Введите число');
@@ -54,6 +60,7 @@ while (!parseInt(userNumber)) {
 }
 console.log('Вы угадали число');
 
+//Задача №6 Деление
 
 let n = +prompt('Введите число n');
 let x = +prompt('Введите число x');
@@ -64,6 +71,7 @@ if (n % x === 0 && n % y === 0) {
     console.log(`n = ${n}, x = ${x}, y = ${y} => FALSE`);
 }
 
+//Задача №7 Кварталы
 
 let monthNumber = +prompt(`Введите номер месяца`);
 if (monthNumber === 1 || monthNumber === 2 || monthNumber === 3) {
@@ -75,6 +83,3 @@ if (monthNumber === 1 || monthNumber === 2 || monthNumber === 3) {
 } else {
     console.log(`Месяц ${monthNumber} => 4 квартал`)
 }
-
-
-
