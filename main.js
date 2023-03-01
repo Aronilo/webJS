@@ -83,3 +83,4 @@ if (monthNumber === 1 || monthNumber === 2 || monthNumber === 3) {
 } else {
     console.log(`Месяц ${monthNumber} => 4 квартал`)
 }
+
