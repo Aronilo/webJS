@@ -47,7 +47,9 @@ console.log(`Студент ${student.last_name} ${student.first_name} учит�
 //Задача №4 Случайные числа
 
 function randomNumber(min, max) {
-    return `randomNumber(${min}, ${max}) -> ${Math.floor(Math.random() * (max - min)) + min}`
+    const randNumber = Math.floor(Math.random() * (max - min)) + min;
+    console.log(`randomNumber(${min}, ${max}) -> ${randNumber}`);
+    return randNumber;
 }
 
 console.log(randomNumber(0, 10));
