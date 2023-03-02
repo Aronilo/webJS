@@ -55,7 +55,21 @@ console.log(randomNumber(-10, 10));
 
 //Задача №5 Значения из массива
 
+function sampleArray(incomeArray = [1,2,3,4], count = 2){
+    const resultArray = [];
+    
+    console.log("входной массив", incomeArray, "кол-во", count)
 
+    for (let i = 0; i < count; i++){
+        const number = randomNumber(0, incomeArray.length-1);
+        console.log(number);
+        resultArray.push(incomeArray[number]);
+    }
+
+    return resultArray;
+}
+
+console.log(sampleArray());
 
 
 
