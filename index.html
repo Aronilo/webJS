@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
     <title>Document</title>
 </head>
 <body>
     <h1>Каширина Валерия Игоревна - Лабораторная работа №9</h1>
-    <script src="main.js"></script>
-</body>
+    <!--<script src="/main.js"></script>
+    -->
+    <header>
+    <button class="open-modal">Регистрация</button>
+    <!-- <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+        </div>
+    </div> -->
+    <div class="modal-window display-nan">
+        <div class="modal-content">
+            <p class="modal__title">Регистрация</p>
+            <form action="" method="post" class="form">
+                <button class="exit">X</button>
+                <div class="form__row">
+                    <label for="email" class="form__label">Email</label>
+                    <input type="email" id="email" class="form__input" placeholder="Введите email">
+                    <p class="error-email display-nan">Неверный email</p>
+                </div>
+                <div class="form__row">
+                    <label for="password" class="form__label">Пароль</label>
+                    <input type="password" id="password" minlength="6" class="form__input" placeholder="Введите пароль">
+                    <p class="error-password display-nan">Минимальная длина пароля 6 символов</p>
+                    <button class="show">Показать пароль</button>
+                </div>
+                
+                <button class="submit" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+    </header>
+    <script src="/lb_3.js"></script>
+    </body>
+    
 </html>
+
