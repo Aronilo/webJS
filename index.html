@@ -25,14 +25,14 @@
                 <button class="exit">X</button>
                 <div class="form__row">
                     <label for="email" class="form__label">Email</label>
-                    <input type="email" id="email" class="form__input" placeholder="Введите email">
-                    <p class="error-email display-nan">Неверный email</p>
+                    <input name = "user-email" type="email" id="email" class="form__input" placeholder="Введите email" >
+                    <p class="error-email error"></p>
                 </div>
                 <div class="form__row">
                     <label for="password" class="form__label">Пароль</label>
-                    <input type="password" id="password" minlength="6" class="form__input" placeholder="Введите пароль">
-                    <p class="error-password display-nan">Минимальная длина пароля 6 символов</p>
-                    <button class="show">Показать пароль</button>
+                    <input name = "user-password" type="password" id="password" minlength="6" class="form__input" placeholder="Введите пароль">
+                    <p class="error-password error"></p>
+                    <button class="show" type="button">Показать пароль</button>
                 </div>
                 
                 <button class="submit" type="submit">Отправить</button>
