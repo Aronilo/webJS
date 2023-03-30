@@ -56,17 +56,22 @@ const server = http.createServer((req, res) => {
             res.end( generateTable(tablerRows) )
         }
         else if (req.method === 'POST'){
-            let body = '';
-            req.on('data', chunk => {
-                body += chunk.toString();
-            });
-            req.on('end', () => {
-                comments.push(body);
-                console.table(comments);
-                res.setHeader('Content-Type', 'text/plain');
-                res.end('ok');
-            });
+            statusCode = 400;
+            res.setHeader('Content-Type', 'text/plain')
+            res.end('400 Bad Request\n')
         }
+        // else if (req.method === 'POST'){
+        //     let body = '';
+        //     req.on('data', chunk => {
+        //         body += chunk.toString();
+        //     });
+        //     req.on('end', () => {
+        //         comments.push(body);
+        //         console.table(comments);
+        //         res.setHeader('Content-Type', 'text/plain');
+        //         res.end('ok');
+        //     });
+        // }
     }
     else if (req.url === '/'){
         res.setHeader('Content-Type', 'text/plain')
