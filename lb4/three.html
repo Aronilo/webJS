@@ -8,17 +8,28 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="threejs"></div>
-    <form>
-      <label
-        ><input type="radio" value="gray" name="color" checked />Серый</label
-      >
-      <label><input type="radio" value="red" name="color" />Красный</label>
-      <label><input type="radio" value="green" name="color" />Зеленый</label>
-      <label><input type="radio" value="blue" name="color" />Синий</label>
-    </form>
-    <script src="three.js"></script>
-    <!-- <script src="model.js"></script> -->
-    <script src="/xd.js"></script>
+    <script type="module" src="lb_4.js"></script>
+
+    <form class="menu_buttons" name="buttonsMenu">
+        <fieldset>
+            <legend>Шарик</legend>
+            <label><input name="color1" type="radio" value="white" checked>white</label>
+            <label><input name="color1" type="radio" value="pink">pink</label>
+            <label><input name="color1" type="radio" value="blue">blue</label>
+            <label><input name="color1" type="radio" value="green">green</label>
+        </fieldset>
+        <fieldset>
+            <Legend>Пирамида</Legend>
+            <label><input name="color2" type="radio" value="black" checked>black</label>
+            <label><input name="color2" type="radio" value="red">red</label>
+            <label><input name="color2" type="radio" value="blue">blue</label>
+            <label><input name="color2" type="radio" value="green">green</label>
+        </fieldset>
+        <fieldset>
+            <legend>Свет</legend>
+            <label><input name="leftLight" type="checkbox" checked>Left Light</label>
+            <label><input name="centerLight" type="checkbox" checked>Center Light</label>
+            <label><input name="rightLight" type="checkbox" checked>Right Light</label>
+        </fieldset>
   </body>
 </html>
