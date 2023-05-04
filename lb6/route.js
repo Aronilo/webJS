@@ -30,7 +30,10 @@ router.use((req, res, next) => {
     next()
 })
 
-router.post('/comments', mid.auth,mid.valid)
+router.post('/comments', mid.auth, mid.valid,(req, res) => {
+    comments.push(req.body.name)
+    res.json(comments)
+})
 
 router.get('/stats', (req, res) => {
     res.setHeader('Content-Type', 'text/html')

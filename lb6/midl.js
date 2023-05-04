@@ -8,11 +8,10 @@ function auth(req, res, next) {
     }
 }
 
-function valid(req, res) {
+function valid(req, res, next) {
     let body = req.body
-    if (body.name) {
-        comments.push(body)
-        res.json(comments)
+    if (body?.name) {
+        next()
     }
     else {
         res.status(400).json("OPS...")
