@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const mid = require('./midl')
 
 let comments = ["Комент 1", "Комент 2", "Комент 3" ]
 
@@ -29,18 +30,7 @@ router.use((req, res, next) => {
     next()
 })
 
-router.post('/comments', (req, res) => {
-    let body = '';
-    req.on('data', chunk => {
-        body += chunk.toString();
-    });
-    req.on('end', () => {
-        comments.push(body);
-        console.table(comments);
-        res.setHeader('Content-Type', 'application/json')
-        res.end( JSON.stringify(comments))
-    });
-})
+router.post('/comments', mid.auth,mid.valid)
 
 router.get('/stats', (req, res) => {
     res.setHeader('Content-Type', 'text/html')
@@ -52,9 +42,7 @@ router.get('/', (req, res) => {
     res.end('Hello world\n')
 })
 
-router.use((req, res) => {
-    res.statusCode = 400
-    res.end("Bad request")
-})
+router.use(mid.badRequest)
 
 module.exports = router;
+
