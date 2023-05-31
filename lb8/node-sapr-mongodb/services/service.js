@@ -109,6 +109,18 @@ async function checkApiKey(collectionName, query) {
   }
 }
 
+async function getKey(collectionName, query) {
+  try {
+    console.log("collectionName:", collectionName);
+    const collection = db.collection(collectionName);
+    console.log("query:", query);
+    return await collection.findOne({ name: query });
+  } catch (err) {
+    console.log("ERROR:", err);
+    return err;
+  }
+}
+
 module.exports = {
   insertComment,
   findComments,
@@ -119,4 +131,5 @@ module.exports = {
   removeModel,
   insertModel,
   checkApiKey,
+  getKey,
 };

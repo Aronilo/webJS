@@ -128,8 +128,22 @@ const check = (req, res, next) => {
   }
 };
 
+const getUserKey = (req, res, next) => {
+  try {
+    //console.log("req:", req.query);
+    const name = req.query.name;
+    //console.log("name:", name);
+    service.getKey("Key-API", name).then((result) => {
+      //console.log("result:", result);
+      res.json(result);
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
 async function errorsController(err, req, res, next) {
-  res.send(500, err.message);
+  res.status(500).send(err.message);
   }
 
 module.exports = {
@@ -143,4 +157,5 @@ module.exports = {
   postModels,
   check,
   errorsController,
+  getUserKey,
 }

@@ -10,7 +10,10 @@ const app = express();
 const PORT = 3000;
 
 
+const path = require("path");
+const dirname = path.resolve();
 
+app.use("/frontend", express.static(path.resolve(dirname, "frontend")));
 
 app.use(express.json());
 
@@ -40,7 +43,10 @@ app
   .delete(controller.check, controller.deleteModel)
 
 
-
+app
+  .route("/getUser")
+  .get(controller.getUserKey)
+  
 
 app.get("/comments/:id", controller.getComment);
 
