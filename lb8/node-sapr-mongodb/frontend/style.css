@@ -2,12 +2,18 @@
 
 html {
   max-width: 70ch;
-  padding: 3em 1em;
+  padding: 1em 1em;
   margin: auto;
   line-height: 1.75;
   font-size: 1.25em;
   font-family: "Ubuntu", sans-serif;
   background-color: #AFEEEE;
+}
+
+.form {
+  display: flex;
+  width: 770px;
+  justify-content: space-evenly;
 }
 
 h1,
@@ -45,9 +51,13 @@ td {
 form {
   margin: 2em auto;
   width: 50%;
-  padding: 1em;
+  /* padding: 1em; */
   border: 1px;
   border-radius: 1em solid;
+}
+
+#loginName {
+  width: 500px;
 }
 
 tr:nth-child(even) {
@@ -65,17 +75,18 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 10px;
   
 }
 
 button:hover {
   background-color: #3eb489;
   cursor: pointer;
-  animation: button-animation 0.3s ease-in-out;
+  /* animation: button-animation 0.3s ease-in-out; */
 }
 
 /* button animation */
-@keyframes button-animation {
+/* @keyframes button-animation {
   0% {
     transform: scale(1);
   }
@@ -85,7 +96,7 @@ button:hover {
   100% {
     transform: scale(1);
   }
-}
+} */
 
 /* beautiful input */
 input[type="text"],
@@ -105,6 +116,8 @@ input[type="password"] {
   margin-bottom: 0.5em;
   border-style: solid;
   background-color: #CCCCFF;
+
+  border-radius: 10px;
 }
 
 .models > tr > div {

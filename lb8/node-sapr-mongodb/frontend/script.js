@@ -61,14 +61,14 @@ function getAllModels() {
         const td1 = document.createElement("td");
         // buttons for show model and delete model here
         const buttonShow = document.createElement("button");
-        buttonShow.innerHTML = "Show";
+        buttonShow.innerHTML = "Показать";
         buttonShow.classList.add("btn_show");
         buttonShow.dataset.id = element._id;
         const buttonDelete = document.createElement("button");
-        buttonDelete.innerHTML = "Delete";
+        buttonDelete.innerHTML = "Удалить";
         buttonDelete.classList.add("btn_del");
         buttonDelete.dataset.id = element._id;
-        td1.innerHTML = "name model " + i + ": " + element.name_model;
+        td1.innerHTML = "Название: " + element.name_model;
         const divBut = document.createElement("div");
         divBut.appendChild(buttonShow);
         divBut.appendChild(buttonDelete);
@@ -104,13 +104,13 @@ table.addEventListener("click", (e) => {
         }
         // show model
         alert(
-          "Model: " +
+          "Модель: " +
             data.name_model +
             "\n" +
-            "Description: " +
+            "Описание: " +
             data.description +
             "\n" +
-            "Comments: " +
+            "Комментарии: " +
             data.comments
         );
       })
